@@ -1,0 +1,7 @@
+#Calling a task from another role
+- name: Nodejs configuration 
+  ansible.builtin.include_role:
+   name: common 
+   tasks_from: nodejs # If you dont mention file, by def it calls main.yml 
+   
+    
