@@ -33,7 +33,6 @@
     state: directory
   ignore_errors: yes 
   become_user: "{{APPUSER}}"
-  ignore_errors: yes 
 
 # Downloads the package from NEXUS
 - name: Download and extract {{COMPONENT}}
