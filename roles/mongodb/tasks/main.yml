@@ -69,7 +69,7 @@
       - catalogue
       - users 
 
-- name: Configuing system name 
+- name: Configuring system name 
   ansible.builtin.include_role:
     name: common 
     tasks_from: set-hostname
