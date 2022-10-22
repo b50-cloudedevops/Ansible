@@ -2,4 +2,4 @@
   hosts: localhost
   become: yes  # Privileges escalation 
   roles:
-    - "{{COMPONENT}}"
+    - "{{ COMPONENT }}"
