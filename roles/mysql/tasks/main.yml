@@ -8,12 +8,12 @@
     name: 
       - mysql-community-server
       - MySQL-python
-    state: present 
+    state: installed
 - name: Installing PyMySqL
   ansible.builtin.shell: pip3 install PyMySQL
   
-- name: Starting {{COMPONENT}} Service 
-  ansible.builtin.service:
+- name: Starting MySQL Service 
+  ansible.builtin.systemd:
     name: mysqld
     state: started
     enabled: yes
