@@ -53,10 +53,10 @@
 #    - name: common 
 #      tasks_from: system-start-svc 
 - name: Configure the Yum Repos 
-  ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash  
+  ansible.builtin.shell: curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -  
 
 - name: Install NodeJS 
-  ansible.builtin.package:
+  ansible.builtin.yum:
     name: "{{item}}"
     state: present  
   loop: 
