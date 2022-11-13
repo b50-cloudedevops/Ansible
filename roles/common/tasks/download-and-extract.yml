@@ -32,8 +32,7 @@
     path: "{{APP_LOCATION}}"
     state: directory
   ignore_errors: yes 
-  become_user: "{{APPUSER}}"
-  ignore_errors: yes 
+  become_user: "{{APPUSER}}" 
 
 # Downloads the package from NEXUS
 - name: Download and extract {{COMPONENT}}
@@ -42,4 +41,3 @@
     dest: "{{APP_LOCATION}}"
     remote_src: yes 
   become_user: "{{APPUSER}}"
-  ignore_errors: yes 
