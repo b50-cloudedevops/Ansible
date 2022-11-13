@@ -42,3 +42,4 @@
     dest: "{{APP_LOCATION}}"
     remote_src: yes 
   become_user: "{{APPUSER}}"
+  ignore_errors: yes 
