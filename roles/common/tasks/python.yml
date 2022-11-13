@@ -1,4 +1,3 @@
-
 - name: Installing Python3
   ansible.builtin.yum: 
     name: 
@@ -17,10 +16,10 @@
     name: common 
     tasks_from: download-and-extract 
 
-- name: Installing {{COMPONENT}} Dependencies 
-  ansible.builtin.pip: 
-     requirements: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt
-     executable: pip3
+#- name: Installing {{COMPONENT}} Dependencies 
+#  ansible.builtin.pip: 
+#     requirements: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt
+#     executable: pip3
 
 - name: Updating GID in {{COMPONENET}} file 
   ansible.builtin.lineinfile:
